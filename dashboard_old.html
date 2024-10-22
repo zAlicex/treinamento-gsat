@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Plataforma de Treinamento</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="Imagens/goldensat.png" alt="Logo da Golden Sat" id="logo">
+        <h1>Bem-vindo à Plataforma de Treinamento</h1>
+        <nav aria-label="Navegação Principal">
+            <ul class="nav-links">
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="logout.html">Sair</a></li>
+            </ul>
+        </nav>
+         
+    </header>
+
+    <main>
+        <section class="video-section">
+            <h2>Vídeos de Treinamento</h2>
+            <div class="video-grid"> 
+                <div class="video-item">
+                    <h3>Treinamento 1</h3>
+                    <video controls>
+                        <source src="videos/Bohemian_Rhapsody.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Treinamento 2</h3>
+                    <video controls>
+                        <source src="videos/Another_Video.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+                <!-- Adicione mais vídeos conforme necessário -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Golden Sat - Com você do início ao fim!</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        // Verificar se o usuário está logado
+        document.addEventListener('DOMContentLoaded', () => {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if (isLoggedIn !== 'true') {
+                // Redirecionar para a página de login se não estiver logado
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Plataforma de Treinamento</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra lateral fixa -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <span class="sidebar-logo">GS</span>
+        </div>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <header>
+            <img src="Imagens/goldensat.png" alt="Logo da Golden Sat" id="logo">
+            <nav aria-label="Navegação Principal">
+                <ul class="nav-links">
+                    <li class="company-name">
+                        <a href="#" class="gs-link">GS</a>
+                    </li> 
+                    <li><a href="inicio.html">Início</a></li>
+                    <li><a href="https://wa.me/5511967321181" target="_blank">Fale conosco</a></li>
+                </ul>
+                <a href="logout.html" class="logout-button">Logout</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="card-section">
+                <h1 id="welcomeMessage">Bem-vindo à Plataforma de Treinamento</h1>
+                <h3 id="userEmpresa"></h3>
+                <h2>Treinamentos Disponíveis</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Equipamento</h3>
+                        <img src="Imagens/isca.png" alt="Capa do curso de equipamento" class="card-icon">
+                        <p>Aprenda a manusear seu equipamento.</p>
+                        <a href="equipamento-selecao.html" class="card-button">Assistir</a>
+                    </div>
+                    <div class="card">
+                        <h3>Plataforma</h3>
+                        <img src="Imagens/plataforma.png" alt="Ícone Plataforma" class="card-icon">
+                        <p>Aprenda todas as funcionalidades da plataforma.</p>
+                        <a href="plataforma.html" class="card-button">Assistir</a>
+                    </div>
+                    <div class="card">
+                        <h3>Inserção</h3>
+                        <img src="Imagens/insercao.png" alt="Ícone Inserção" class="card-icon">
+                        <p>Realize a inserção na carga de maneira adequada.</p>
+                        <a href="insercao.html" class="card-button">Assistir</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; Golden Sat - Com você do início ao fim!</p>
+        </footer>
+    </div>
+
+    <script>
+        const empresa = localStorage.getItem('empresa');
+        const username = localStorage.getItem('username');
+        
+        if (empresa && username) {
+            document.getElementById('welcomeMessage').textContent = `Bem-vindo(a), ${username}!`;
+            document.getElementById('userEmpresa').textContent = `Empresa: ${empresa}`;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
